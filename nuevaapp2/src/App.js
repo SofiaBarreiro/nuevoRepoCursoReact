@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
+
 import tasks from '.\\Samples\\Tasks.json';
-
-
-import Tasks from '.\\component\\Tasks';
+import Tasks from '.\\components\\Tasks';
 
 
 console.log(Tasks);
@@ -12,20 +11,13 @@ class App extends Component {
 
   state = {
 
-    tasks: tasks
+    tasks: tasks          //me quede el en el minuto 01:35 !
+
 
   }
   render() {
     return <div>
-      {
-
-        this.state.tasks.map(e => <p key={e.id}>
-          {e.title} - {e.description} - {e.id} - {e.done}
-
-        </p>)
-
-        // < Tasks Task= {this.state.tasks}/>
-     }
+     <Tasks top={this.state.tasks}/>
     </div>
 
 

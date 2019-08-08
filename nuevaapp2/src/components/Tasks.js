@@ -1,10 +1,11 @@
 import React, { Component} from 'react';
+import Task from './Task';
 
 class Tasks extends Component {
 
     render() {
 
-        return <h1>Tasks</h1>
+        return this.props.top.map(task => <Task top1={task}/>);
 
 
     }
