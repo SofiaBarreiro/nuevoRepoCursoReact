@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
+import './task.css';
 
-class Tasks extends Component {
+
+class Task extends Component {
 
     render() {
 
-        return <div>
-            {this.props.top1.title} - {this.props.top1.description} - {this.props.top1.id} - {this.props.top1.done}
+        return <div class='red'>
+            {this.props.top1.title} - 
+            {this.props.top1.description} - 
+            {this.props.top1.id} - 
+            {this.props.top1.done}
             < input type='checkbox' />
             <button>
                 x
@@ -13,10 +18,10 @@ class Tasks extends Component {
 
         </div>
         //me quede el en el minuto 01:35 !
-
+        
     }
 
 
 }
 
-export default Tasks;
+export default Task;
